@@ -71,5 +71,5 @@ For more information about the different settings please refer to the SAS docume
 * Version 1.1 (29OCT2024)
   * Implemented feedback
 
-*Version 1.0 (07OCT2024)
+* Version 1.0 (07OCT2024)
   * Initial version
