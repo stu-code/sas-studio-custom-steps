@@ -2,7 +2,7 @@
 
 ## Description
 
-This custom step exports a complete collection of SAS Studio Flows from a directory in SAS Content or the SAS Compute environment as SAS code to a specified physical file system location.
+This custom step exports a complete collection of SAS Studio Flows from a directory in SAS Content or physical location as SAS code to a specified physical file system location.
 
 The generated code can be used in a CI/CD pipeline and/or versioning environment.
 
@@ -26,8 +26,8 @@ This custom step is created and tested in Viya 4, Stable 2025.12
 ### Tab: Options
 ![Options](img/Step%20-%20Options.png)
 
-- **Select the folder that contains the flows**: Here you need to select the SAS content or SAS compute directory, containing your SAS Studio flows.
-- **Select the directory where the .sas files will be stored**: Select the SAS compute directory to write the .sas files to. *Note that SAS content directories are not supported for this option*.
+- **Select the folder that contains the flows**: Here you need to select the SAS content or physical directory, containing your SAS Studio flows.
+- **Select the directory where the .sas files will be stored**: Select the physical location to write the .sas files to. *Note that SAS content directories are not supported for this option*.
 - **Specify the maximum number of flows to process**: Specify the maximum number of flows that can be processed within a directory. The default value is 250.
 - **HTTP time-out, in seconds**: The numbers of seconds SAS waits for the HTTP procedure to return with a response.
 - **Init code**: If selected, it will include the initialization code for the SAS Studio session. **The default value is unchecked**.
@@ -51,7 +51,7 @@ Note that:
 - The custom step doesn't process sub-directories.
 - Processing SAS Studio Flows stored on the file system can take a bit longer.
 - The time-out value for the PROC HTTP might be overruled by the time-out set by the REST API.
-- When code, for whatever reason, can't be generated, the custom step will make that know by a line in the log file simular to **'ERROR: Unable to generated code for ...'** and by retrieving the error message from the response file.
+- When code, for whatever reason, can't be generated, the custom step will make that known by a line in the log file simular to **'ERROR: Unable to generated code for ...'** and by retrieving the error message from the response file.
 - It will check if the target directory exists. In case it doesn't, the custom step stops the process and will write the line **'ERROR: The target directory does not exist'**. in the log.
 - The resulting file name is the same the original flow name, where the .flw extension is replaced with the .sas extenion. (i.e: ***flow_name.flw*** => ***flow_name.sas***).
 - When you store passwords or other sensitive information in your autoexec and you have selected the **User autoexec** option, this sensitive information ***WILL*** become visible in the resulting .sas code!
