@@ -38,6 +38,8 @@ For more information about the different settings please refer to the SAS docume
 ## Change Log
 
 ### OCR - Document Analysis - Execute Batch OCR Process
+* Version 1.5 (19FEB2026)
+  * Use absolute path for python command
 
 * Version 1.4 (04NOV2025)
   * Add PaddleOCR to OCR engine options
@@ -59,6 +61,8 @@ For more information about the different settings please refer to the SAS docume
   * Initial version
 
 ### OCR - Document Analysis - Produce Usage Report Output
+* Version 1.3 (19FEB2026)
+  * Use absolute path for python command
 
 * Version 1.2 (21NOV2024)
   * Added option to enable syncronous processing
@@ -67,5 +71,5 @@ For more information about the different settings please refer to the SAS docume
 * Version 1.1 (29OCT2024)
   * Implemented feedback
 
-*Version 1.0 (07OCT2024)
+* Version 1.0 (07OCT2024)
   * Initial version
